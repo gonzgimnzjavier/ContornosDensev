@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,8 +8,22 @@
     <title>Document</title>
 </head>
 <body>
-    <form>
-        Inserta el numero <input type="text">
+
+
+    <?php
+    if($_POST){
+    
+    $num = $_POST["numero"];
+    if($num >=0){
+        echo "El numero ".$num." es positivo";
+    }else{
+        echo "El numero ".$num." es negativo";
+        }
+    }
+    ?>
+
+    <form action="ejem04.html" method="post">
+        Inserta el numero <input name="numero" type="text">
         <br/>
         <input type="submit" value="Enviar">
     </form>
